@@ -1,13 +1,11 @@
-/* eslint-disable react/jsx-no-undef */
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ProductsResponse } from 'core/types/Product';
+import Pagination from 'core/components/Pagination';
+import { makeRequest } from 'core/utils/request';
 import ProductCard from './components/ProductCard';
 import ProductCardLoader from './components/Loaders/ProductCardLoader';
 import './styles.scss';
-import { makeRequest } from 'core/utils/request';
-import { ProductsResponse } from 'core/types/Product';
-import Pagination from 'core/components/Pagination';
-
 
 const Catalog = () => {
   const [productsResponse, setProductsResponse] = useState<ProductsResponse>();
